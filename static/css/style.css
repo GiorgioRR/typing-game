@@ -1,0 +1,195 @@
+/*
+    Dark Green:     0b0f0a
+    Light Green:    6dfd4f
+*/
+/* --------------------------------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; width: 100%; padding: 0; margin: 0; }
+
+html {
+    background-color: #040e00;
+    color: #3bc900;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    /* overflow-y: hidden; */
+}
+
+body {
+    /* position: fixed; */
+}
+
+h1 {
+    color: lightgreen;
+}
+
+h2 {
+    color: #f7f7f7;
+}
+
+/* --------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------------------------------- */
+
+.title {
+    width: 65%;
+    margin-left: 10px;
+}
+
+.l-title {
+    display: inline-block;
+    position: relative;
+    background-color: #040e00;
+    text-align: center;
+    color: #35fc0c;
+    width: 120px;
+    left: 1%;
+}
+
+.l-instr {
+    display: inline-block;
+    position: relative;
+    background-color: #040e00;
+    text-align: center;
+    color: #35fc0c;
+    width: 100px;
+    left: 53%;
+}
+
+.leaderboard {
+    display: inline-block;
+    vertical-align: top;
+    /* overflow: auto; */
+    color: white;
+    height: 80%;
+    width: 60%;
+
+    margin-left: 10px;
+    border: dotted #6dfd4f;
+}
+
+.instruction {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    height: 80%;
+    width: 25%;
+
+    margin-left: 10px;
+    border: dotted #6dfd4f;
+}
+
+.button {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.name {
+    display: inline-block;
+    width: 35%;
+    margin-left: 3px;
+}
+
+.email {
+    display: inline-block;
+    width: 44%;
+}
+
+.score {
+    display: inline-block;
+    width: 5%;
+}
+
+
+/* --------------------------------------------------------- */
+/* GAMEPLAY STYLE */
+/* --------------------------------------------------------- */
+
+#input {
+    position: absolute;
+    top: 95%;
+    left: 1%;
+    width: 16%;
+}
+
+.input {
+    position: absolute;
+    color: #61f258;
+    top: 96%;
+    left: 18%;
+}
+
+#score {
+    position: relative;
+    color: #61f258;
+    width: 90px;
+    top: 1%;
+    left: 1%;
+}
+
+#time {
+    position: absolute;
+    color: #61f258;
+    top: 40%;
+    left: 50%;
+}
+
+/* --------------------------------------------------------- */
+/* SAVE DATA */
+/* --------------------------------------------------------- */
+
+.save {
+    position: absolute;
+    color: white;
+    height: 19%;
+    width: 27%;
+
+    top: 81%;
+    left: 73%;
+    border: dotted #6dfd4f;
+}
+
+.save-b {
+    background-color: #040e00;
+    color: #6dfd4f;
+    margin-left: 2px;
+}
+
+.margin {
+    margin-left: 2px;
+}
+
+.user-n {
+    display: inline-block;
+}
+
+#invalid {
+    display: inline-block;
+    color: red;
+}
+
+@media only screen and (max-width: 840px) {
+    #input {
+        width: 22%;
+    }
+
+    .input {
+        left: 24%;
+    }
+}
