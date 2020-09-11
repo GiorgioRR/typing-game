@@ -42,9 +42,9 @@ class User(db.Model):
 @app.route("/home")
 @app.route("/")
 def index():
-    users = []
+    users = [["", "name", "email(optional)", "score"], ]
     for n, user in enumerate(User.query.all()):
-        users.append([n+1, user.name, user.email, user.score])
+        users.append([f"#{n+1}", user.name, user.email, user.score])
 
     return render_template("index.html", users=users)
 
@@ -89,7 +89,7 @@ def handle_my_custom_event(json, methods=["POST", "GET"]):
 
 @socketio.on("disconnect")
 def diconnect_user():
-    #ip = session.get("ip_address")
+    # ip = session.get("ip_address")
     session["online"] = False
 
 

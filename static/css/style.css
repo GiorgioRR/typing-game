@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 
-html, body { height: 100%; width: 100%; padding: 0; margin: 0; }
+html, body { height: 100%; width: 100%; }
 
 html {
     background-color: #040e00;
@@ -20,11 +20,7 @@ html {
     font-family: "Lato", "Arial", sans-serif;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-    /* overflow-y: hidden; */
-}
-
-body {
-    /* position: fixed; */
+    overflow-y: hidden;
 }
 
 h1 {
@@ -32,6 +28,14 @@ h1 {
 }
 
 h2 {
+    position: relative;
+    color: #35fc0c;
+    background-color: #040e00;
+    width: fit-content;
+    z-index: 1;
+}
+
+h3 {
     color: #f7f7f7;
 }
 
@@ -39,83 +43,99 @@ h2 {
 /* REUSABLE COMPONENTS */
 /* --------------------------------------------------------- */
 
+.col-one {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: .5em;
+    height: 85vh;
+    width: 61%;
+    min-width: 510px;
+}
+
+.col-two {
+    display: inline-block;
+    vertical-align: top;
+    height: 85vh;
+    width: 27%;
+    min-width: 260px;
+}
+
+.col-three {
+    display: inline-block;
+    vertical-align: top;
+    height: 85vh;
+    /* width: 10%; */
+}
+
+.frame {
+    height: 85vh;
+    /* margin-left: .5em; */
+    border: dotted #6dfd4f;
+}
+
 .title {
-    width: 65%;
-    margin-left: 10px;
+    display: inline-block;
+    margin: .4em;
 }
 
 .l-title {
-    display: inline-block;
-    position: relative;
-    background-color: #040e00;
-    text-align: center;
-    color: #35fc0c;
-    width: 120px;
-    left: 1%;
+    top: 12%;
+    left: 17%;
 }
 
 .l-instr {
-    display: inline-block;
-    position: relative;
-    background-color: #040e00;
-    text-align: center;
-    color: #35fc0c;
-    width: 100px;
-    left: 53%;
+    top: 12%;
+    left: 17%;
 }
 
 .leaderboard {
-    display: inline-block;
-    vertical-align: top;
-    /* overflow: auto; */
-    color: white;
-    height: 80%;
+    overflow: auto;
+    position: absolute;
+    z-index: -1;
     width: 60%;
-
-    margin-left: 10px;
-    border: dotted #6dfd4f;
+    min-width: 510px;
 }
 
 .instruction {
-    display: inline-block;
-    vertical-align: top;
-    color: white;
-    height: 80%;
+    overflow: auto;
+    position: absolute;
     width: 25%;
+    min-width: 260px;
+    z-index: -1;
+}
 
-    margin-left: 10px;
-    border: dotted #6dfd4f;
+#element {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
 }
 
 .button {
-    position: absolute;
-    top: 90%;
-    left: 90%;
+    position: relative;
+    top: 1.14em;
+    right: 1.6em;
 
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: .7em 1.6em;
     text-align: center;
-    text-decoration: none;
-    font-size: 16px;
+    font-size: .8em;
+    cursor: pointer;
 }
+
 .name {
-    display: inline-block;
     width: 35%;
     margin-left: 3px;
 }
 
 .email {
-    display: inline-block;
-    width: 44%;
+    width: 54%;
 }
 
 .score {
-    display: inline-block;
     width: 5%;
 }
-
 
 /* --------------------------------------------------------- */
 /* GAMEPLAY STYLE */
@@ -184,7 +204,7 @@ h2 {
     color: red;
 }
 
-@media only screen and (max-width: 840px) {
+@media screen and (max-width: 840px) {
     #input {
         width: 22%;
     }

@@ -5,27 +5,33 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="title">Typing Game v0.1</h1>
+    <header>
+        <h1 class="title">Typing Game v0.1</h1>
+    </header>
 
-    <h2 class="l-title">LeaderBoard</h2>
-    <h2 class="l-instr">Instruction</h2>
-    <br>
-    <div class="leaderboard">
-        <h2 class="name">name</h2>
-        <h2 class="email">email(optional)</h2>
-        <h2 class="score">score</h2>
+    <main>
+        <div class="col-one">
+            <h2 class="l-title">LeaderBoard</h2>
+            <div class="frame leaderboard">
+                {% for user in users %}
+                    <div id="element">
+                        <h3 class="name">{{user[0]}} {{user[1]}}</h3> <!-- [#1 username]-->
+                        <h3 class="email">{{user[2]}}</h3>
+                        <h3 class="score">{{user[3]}}</h3>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 
-        {% for user in users %}
-            <h2 class="name">#{{user[0]}} {{user[1]}}</h2>
-            <h2 class="email">{{user[2]}}</h2>
-            <h2 class="score">{{user[3]}}</h2>
-        {% endfor %}
-    </div>
+        <div class="col-two">
+            <h2 class="l-instr">Instruction</h2>
+            <p class="frame instruction">
+                *თამაშის წესები*
+            </p>
+        </div>
 
-    
-    <div class="instruction">
-        <h2>*თამაშის წესები*</h2>
-    </div>
-
-    <a href="/start"><button class="button">Play</button></a>
+        <div class="col-three">
+            <a href="/start"><button class="button">Play</button></a>
+        </div>
+    </main>
 {% endblock %}
