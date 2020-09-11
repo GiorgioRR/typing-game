@@ -69,7 +69,6 @@ h3 {
 
 .frame {
     height: 85vh;
-    /* margin-left: .5em; */
     border: dotted #6dfd4f;
 }
 
@@ -79,13 +78,13 @@ h3 {
 }
 
 .l-title {
-    top: 12%;
-    left: 17%;
+    top: 1%;
+    left: 1.5%;
 }
 
 .l-instr {
-    top: 12%;
-    left: 17%;
+    top: 1%;
+    left: 1.5%;
 }
 
 .leaderboard {
@@ -112,8 +111,8 @@ h3 {
 
 .button {
     position: relative;
-    top: 1.14em;
-    right: 1.6em;
+    top: 3.5%;
+    right: 30%;
 
     background-color: #4CAF50;
     border: none;
