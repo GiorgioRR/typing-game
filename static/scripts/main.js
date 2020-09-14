@@ -104,8 +104,6 @@ function main () {
     var time  = document.getElementById("time");
     var entry = document.getElementById("input");
 
-    // document.getRootNode("body").overflow = "visible";
-
     socket.on( 'connect', function() {
         socket.emit( 'joined', {
             data: 'User Connected'
