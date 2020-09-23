@@ -2,9 +2,6 @@
     Dark Green:     0b0f0a
     Light Green:    6dfd4f
 */
-/* --------------------------------------------------------- */
-/* BASIC SETUP */
-/* --------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -153,78 +150,5 @@ body main .frame {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #051a00;
-}
-
-/* --------------------------------------------------------- */
-/* GAMEPLAY STYLE */
-/* --------------------------------------------------------- */
-#input {
-  position: absolute;
-  top: 95%;
-  left: 1%;
-  width: 16%;
-}
-
-.input {
-  position: absolute;
-  color: #61f258;
-  top: 96%;
-  left: 18%;
-}
-
-#score {
-  position: relative;
-  color: #61f258;
-  width: 90px;
-  top: 1%;
-  left: 1%;
-}
-
-#time {
-  position: absolute;
-  color: #61f258;
-  top: 40%;
-  left: 50%;
-}
-
-/* --------------------------------------------------------- */
-/* SAVE DATA */
-/* --------------------------------------------------------- */
-.save {
-  position: absolute;
-  color: white;
-  height: 19%;
-  width: 27%;
-  top: 81%;
-  left: 73%;
-  border: dotted #6dfd4f;
-}
-
-.save-b {
-  background-color: #040e00;
-  color: #6dfd4f;
-  margin-left: 2px;
-}
-
-.margin {
-  margin-left: 2px;
-}
-
-.user-n {
-  display: inline-block;
-}
-
-#invalid {
-  display: inline-block;
-  color: red;
-}
-
-@media screen and (max-width: 840px) {
-  #input {
-    width: 22%;
-  }
-  .input {
-    left: 24%;
-  }
 }
 /*# sourceMappingURL=main.css.map */

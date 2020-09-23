@@ -1,0 +1,83 @@
+/*     >>>> GAMEPLAY STYLE <<<<
+        Dark Green:     0b0f0a
+        Light Green:    6dfd4f
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #6dfd4f;
+  background-color: #0b0f0a;
+  font-size: 25px;
+}
+
+body #input {
+  position: absolute;
+  top: 95%;
+  margin-left: 5px;
+  width: 16%;
+  min-width: 160px;
+}
+
+body .input {
+  position: absolute;
+  color: #61f258;
+  top: 96%;
+  left: 18%;
+}
+
+body #score {
+  position: relative;
+  color: #61f258;
+  width: 120px;
+  margin: 6px;
+}
+
+body #time {
+  position: absolute;
+  color: #61f258;
+  top: 40%;
+  left: 50%;
+}
+
+/* --------------------------------------------------------- */
+/* SAVE DATA */
+/* --------------------------------------------------------- */
+.save {
+  position: absolute;
+  color: white;
+  height: 19%;
+  width: 27%;
+  top: 81%;
+  left: 73%;
+  border: dotted #6dfd4f;
+}
+
+.save-b {
+  background-color: #040e00;
+  color: #6dfd4f;
+  margin-left: 2px;
+}
+
+.margin {
+  margin-left: 2px;
+}
+
+.user-n {
+  display: inline-block;
+}
+
+#invalid {
+  display: inline-block;
+  color: red;
+}
+/*# sourceMappingURL=gameplay.css.map */

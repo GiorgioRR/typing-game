@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
 {% block head %}
+    <link rel="stylesheet" href="../static/styles/gameplay.css">
+    
     <title>Typing Game</title>
 {% endblock %}
 
 
 {% block body %}
-
     <h2 id="score">score: 00</h2>
     <h1 id="time">3</h1>
 
@@ -15,7 +16,7 @@
 
     <div id="elements"></div>
 
-    <!-- <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script> -->
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
 {% endblock %}
