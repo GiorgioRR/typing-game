@@ -115,11 +115,21 @@ def save_score(json):
         socketio.emit("invalid-usr", {})
 
 
-if __name__ == "__main__":
-    if not os.path.isfile(DATABASE):
-        print("fuck")
+def init_db():
+    db.drop_all()
+    db.create_all()
+    db.session.commit()
+
+
+def main():
+    global words
 
     with open(wordlist, "r") as wl:
         words = wl.readlines()
 
+    init_db()
     socketio.run(app, debug=True)  # app.run(debug=True)
+
+
+if __name__ == "__main__":
+    main()
