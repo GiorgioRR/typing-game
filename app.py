@@ -122,14 +122,12 @@ def init_db():
 
 
 def main():
-    global words
-
-    with open(wordlist, "r") as wl:
-        words = wl.readlines()
-
-    init_db()
+    # init_db()
     socketio.run(app, debug=True)  # app.run(debug=True)
 
 
 if __name__ == "__main__":
+    with open(wordlist, "r") as wl:
+        words = wl.readlines()
+
     main()

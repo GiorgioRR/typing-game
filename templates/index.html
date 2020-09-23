@@ -6,15 +6,15 @@
 
 {% block body %}
     <header>
-        <h1 class="title">Typing Game v0.1</h1>
+        <h1>Typing Game v0.1</h1>
     </header>
 
     <main>
         <div class="col-one">
-            <h2 class="l-title">LeaderBoard</h2>
-            <div class="frame leaderboard">
+            <h2>LeaderBoard</h2>
+            <div class="frame">
                 {% for user in users %}
-                    <div id="element">
+                    <div>
                         <h3 class="name">{{user[0]}} {{user[1]}}</h3> <!-- [#1 username]-->
                         <h3 class="email">{{user[2]}}</h3>
                         <h3 class="score">{{user[3]}}</h3>
@@ -24,14 +24,14 @@
         </div>
 
         <div class="col-two">
-            <h2 class="l-instr">Instruction</h2>
-            <p class="frame instruction">
+            <h2>Instruction</h2>
+            <p class="frame">
                 *თამაშის წესები*
             </p>
         </div>
 
         <div class="col-three">
-            <a href="/start"><button class="button">Play</button></a>
+            <a href="/start"><button>Play</button></a>
         </div>
     </main>
 {% endblock %}
