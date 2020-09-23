@@ -18,65 +18,70 @@ body {
   color: #6dfd4f;
   background-color: #0b0f0a;
   font-size: 25px;
-}
-
-body #input {
-  position: absolute;
-  top: 95%;
-  margin-left: 5px;
-  width: 16%;
-  min-width: 160px;
+  /* --------------------------------------------------------- */
+  /* SAVE DATA */
+  /* --------------------------------------------------------- */
 }
 
 body .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
-  color: #61f258;
-  top: 96%;
-  left: 18%;
+  top: 100vh;
+  -webkit-transform: translate(0px, -35px);
+          transform: translate(0px, -35px);
+  margin-left: 5px;
+  width: 500px;
+  min-width: 500px;
+}
+
+body .input #input {
+  width: 230px;
+  min-width: 160px;
 }
 
 body #score {
-  position: relative;
-  color: #61f258;
   width: 120px;
   margin: 6px;
 }
 
 body #time {
   position: absolute;
-  color: #61f258;
   top: 40%;
   left: 50%;
 }
 
-/* --------------------------------------------------------- */
-/* SAVE DATA */
-/* --------------------------------------------------------- */
-.save {
+body .save {
   position: absolute;
   color: white;
-  height: 19%;
-  width: 27%;
-  top: 81%;
-  left: 73%;
+  height: 150px;
+  width: 390px;
+  top: 100vh;
+  left: 100vw;
+  -webkit-transform: translate(-410px, -150px);
+          transform: translate(-410px, -150px);
   border: dotted #6dfd4f;
 }
 
-.save-b {
+body .save .save-b {
   background-color: #040e00;
   color: #6dfd4f;
   margin-left: 2px;
 }
 
-.margin {
+body .save .margin {
   margin-left: 2px;
 }
 
-.user-n {
+body .save .user-n {
   display: inline-block;
 }
 
-#invalid {
+body .save #invalid {
   display: inline-block;
   color: red;
 }

@@ -16,67 +16,66 @@ body {
     background-color: #0b0f0a;
     font-size: 25px;
 
-    #input {
-        position: absolute;
-        top: 95%;
-        margin-left: 5px;
-        width: 16%;
-        min-width: 160px;
-    }
-    
     .input {
+        display: flex;
+        justify-content: space-between;
+
         position: absolute;
-        color: #61f258;
-        top: 96%;
-        left: 18%;
+        top: 100vh;
+        transform: translate(0px, -35px);
+        margin-left: 5px;
+        width: 500px;
+        min-width: 500px;
+
+        #input {
+            width: 230px;
+            min-width: 160px;
+        }
     }
-    
+
     #score {
-        position: relative;
-        color: #61f258;
         width: 120px;
         margin: 6px;
     }
     
     #time {
         position: absolute;
-        color: #61f258;
         top: 40%;
         left: 50%;
     }
     
-}
+    /* --------------------------------------------------------- */
+    /* SAVE DATA */
+    /* --------------------------------------------------------- */
 
-/* --------------------------------------------------------- */
-/* SAVE DATA */
-/* --------------------------------------------------------- */
+    .save {
+        position: absolute;
+        color: white;
+        height: 150px;
+        width: 390px;
 
-.save {
-    position: absolute;
-    color: white;
-    height: 19%;
-    width: 27%;
+        top: 100vh;
+        left: 100vw;
+        transform: translate(-410px, -150px);
+        border: dotted #6dfd4f;
 
-    top: 81%;
-    left: 73%;
-    border: dotted #6dfd4f;
-}
+        .save-b {
+            background-color: #040e00;
+            color: #6dfd4f;
+            margin-left: 2px;
+        }
+        
+        .margin {
+            margin-left: 2px;
+        }
+        
+        .user-n {
+            display: inline-block;
+        }
 
-.save-b {
-    background-color: #040e00;
-    color: #6dfd4f;
-    margin-left: 2px;
-}
-
-.margin {
-    margin-left: 2px;
-}
-
-.user-n {
-    display: inline-block;
-}
-
-#invalid {
-    display: inline-block;
-    color: red;
+        #invalid {
+            display: inline-block;
+            color: red;
+        }
+    }
 }

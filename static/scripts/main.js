@@ -2,14 +2,17 @@
 function save_data (score_v) {
     var user_n  = document.getElementById("user-n").value;
     var email_n = document.getElementById("email-n").value;
+
     socket.emit( 'score', {
         username: user_n,
         email: email_n,
         score: score_v
     })
+
     socket.on( 'invalid-usr', function (msg) {
         document.getElementById("invalid").textContent  = "invalid";
     })
+
     socket.on( 'redirect', function (data) {
         window.location = data.url;
     })
@@ -49,8 +52,8 @@ function check_elements () {
 
 function next_step (new_text, class_n) {
     for (i = 0; i < elements.length; i++) {
-        var ell = elements[i][0];
-        var d = document.getElementById(ell);
+        let ell = elements[i][0];
+        let d = document.getElementById(ell);
         d.style.left = (parseInt(d.style.left.replace("px", ""))+22)+"px";
     }
 
@@ -73,7 +76,7 @@ function check (text) {
                 word_list.splice(i, 1);
                 break;
             }
-        }  // ეკრანიდან ვაქრობთ მაგ რაღაცას
+        }  // deleting that thing
         var score = document.getElementById("score");
         var current = parseInt(score.textContent.split(" ")[1]);
         
@@ -101,6 +104,7 @@ function append_message (text, top_num, class_n) {
 
 
 function main () {
+    done();
     var time  = document.getElementById("time");
     var entry = document.getElementById("input");
 
