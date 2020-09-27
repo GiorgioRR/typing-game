@@ -44,11 +44,12 @@ body {
                 top: 1%;
                 left: 1.5%;
             }
+
             div {
                 overflow: auto;
-                position: absolute;
+                // position: absolute;
                 z-index: -1;
-                width: 60%;
+                width: 60vw;
                 min-width: 510px;
 
                 div {

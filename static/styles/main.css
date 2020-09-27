@@ -49,9 +49,8 @@ body main .col-one h2 {
 
 body main .col-one div {
   overflow: auto;
-  position: absolute;
   z-index: -1;
-  width: 60%;
+  width: 60vw;
   min-width: 510px;
 }
 

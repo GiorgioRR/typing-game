@@ -42,7 +42,7 @@ class User(db.Model):
 @app.route("/home")
 @app.route("/")
 def index():
-    users = [["", "name", "email(optional)", "score"], ]
+    users = [["", "##  name", "email(optional)", "score"], ]
     for n, user in enumerate(User.query.all()):
         users.append([f"#{n+1}", user.name, user.email, user.score])
 
