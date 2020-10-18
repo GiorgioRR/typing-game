@@ -1,12 +1,7 @@
-/*
-    Dark Green:     0b0f0a
-    Light Green:    6dfd4f
-*/
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -15,87 +10,81 @@ html, body {
 }
 
 html {
-  background-color: #040e00;
-  color: #3bc900;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 20px;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  /* overflow: hidden; */
+  color: #6dfd4f;
+  background-color: #0b0f0a;
+  font-size: 18px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: none;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #affe96;
+}
+
+body {
+  /* overflow: hidden */
   overflow-y: scroll;
 }
-
 body header h1 {
-  display: inline-block;
-  margin: .4em;
+  display: block;
+  margin: 0.4em;
   color: lightgreen;
 }
-
-body main .col-one {
+body main div, body main a {
   display: inline-block;
   vertical-align: top;
-  margin-left: .5em;
-  height: 85vh;
+}
+body main .col-one {
+  margin-left: 0.5em;
   width: 61%;
   min-width: 510px;
 }
-
 body main .col-one h2 {
   top: 1%;
   left: 1.5%;
 }
-
 body main .col-one div {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: -1;
   width: 60vw;
   min-width: 510px;
 }
-
 body main .col-one div div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  justify-content: flex-start;
 }
-
 body main .col-one div div h3 {
   color: #f7f7f7;
 }
-
 body main .col-one div div .name {
   width: 35%;
-  margin-left: 3px;
 }
-
 body main .col-one div div .email {
   width: 54%;
 }
-
 body main .col-one div div .score {
   width: 5%;
 }
-
 body main .col-two {
-  display: inline-block;
-  vertical-align: top;
-  height: 85vh;
   width: 27%;
   min-width: 260px;
 }
-
 body main .col-two h2 {
   top: 1%;
   left: 1.5%;
 }
-
 body main .col-two p {
   overflow: auto;
   position: absolute;
@@ -103,51 +92,35 @@ body main .col-two p {
   min-width: 260px;
   z-index: -1;
 }
-
-body main .col-three {
-  display: inline-block;
-  vertical-align: top;
-  height: 85vh;
-  /* width: 10%; */
-}
-
-body main .col-three a button {
+body main a button {
+  margin-top: 10px;
   position: relative;
-  top: 3.5%;
-  right: 30%;
-  background-color: #4CAF50;
+  top: 3vh;
+  right: 1vw;
+  background-color: #062200;
   border: none;
   color: white;
-  padding: .7em 1.6em;
+  padding: 0.6em 2em;
   text-align: center;
-  font-size: .8em;
+  font-size: 1em;
+  font-weight: 9000;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
-
+body main a button:hover {
+  background-color: white;
+  color: #146e01;
+}
 body main h2 {
   position: relative;
   color: #35fc0c;
   background-color: #040e00;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   z-index: 1;
 }
-
 body main .frame {
   height: 85vh;
   border: dotted #6dfd4f;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #051a00;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=dashboard.css.map */

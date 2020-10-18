@@ -1,0 +1,37 @@
+// FILE: _save-data.sass
+
+body
+    .save
+        position: absolute
+        top: 100vh
+        left: 100vw
+        transform: translate(-520px, -155px)
+        
+        color: white
+        height: 155px
+        width: 500px
+        border: dotted #6dfd4f
+    
+        .save-b
+            background-color: #040e00
+            color: #6dfd4f
+            margin-left: 2px
+            padding: 4px
+
+            cursor: pointer
+            transition: all .3s linear
+
+            &:hover,
+            &active 
+                background-color: #6dfd4f
+                color: #040e00
+
+        .margin
+            margin-left: 2px
+
+        .user-n
+            display: inline-block
+    
+        #invalid
+            display: inline-block
+            color: red

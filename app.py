@@ -70,7 +70,7 @@ def start_game():
         socketio.sleep(session["speed"])
         number = random.randint(0, 10000) # 10 000
         word   = words[number]
-        print("sent:", word)
+        # print("sent:", word)
         socketio.emit("word", {"w": word,
                                "num": random.randint(12, 85),
                                "class_n": n})
@@ -122,12 +122,14 @@ def init_db():
 
 
 def main():
-    # init_db()
+    global words
+    
+    with open(wordlist, "r") as wl:
+        words = wl.readlines()
+
+    init_db()
     socketio.run(app, debug=True)  # app.run(debug=True)
 
 
 if __name__ == "__main__":
-    with open(wordlist, "r") as wl:
-        words = wl.readlines()
-
     main()

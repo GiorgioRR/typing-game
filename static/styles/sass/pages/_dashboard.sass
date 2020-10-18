@@ -1,0 +1,108 @@
+// FILE: _dashboard.scss
+
+// sass --watch .\static\styles\sass\pages/_dashboard.sass:.\static\styles\css\dashboard.css
+// sass --watch .\static\styles\sass\pages/_gameplay.sass:.\static\styles\css\gameplay.css
+
+//      Dark Green:     0b0f0a
+//      Light Green:    6dfd4f
+
+@import '../helpers/base'
+@import '../layout/scrollbar'
+
+body
+    /* overflow: hidden */
+    overflow-y: scroll
+
+    header
+        h1
+            display: block
+            margin: .4em
+            color: lightgreen
+
+    main
+        div, a
+            display: inline-block
+            vertical-align: top
+            // height: 95vh
+
+        .col-one
+            margin-left: .5em
+            width: 61%
+            min-width: 510px
+
+            h2
+                top: 1%
+                left: 1.5%
+
+            div
+                overflow-x: hidden
+                overflow-y: auto
+                // position: absolute
+                z-index: -1
+                width: 60vw
+                min-width: 510px
+
+                div
+                    display: flex
+                    justify-content: flex-start
+                    // align-items: left
+    
+                    h3
+                        color: #f7f7f7
+
+                    .name
+                        width: 35%
+                        // margin-left: 3px;
+                    
+                    .email
+                        width: 54%
+                    
+                    .score
+                        width: 5%
+        
+        .col-two
+            width: 27%
+            min-width: 260px
+
+            h2
+                top: 1%
+                left: 1.5%
+
+            p
+                overflow: auto
+                position: absolute
+                width: 25%
+                min-width: 260px
+                z-index: -1
+        
+        a button
+            margin-top: 10px
+
+            position: relative
+            top: 3vh
+            right: 1vw
+
+            background-color: darken(#35fc0c, 45)
+            border: none
+            color: white
+            padding: .6em 2em
+            text-align: center
+            font-size: 1em
+            font-weight: 9000
+            cursor: pointer
+            transition: all .3s linear
+
+            &:hover
+                background-color: white
+                color: darken(#35fc0c, 30)
+
+        h2
+            position: relative
+            color: #35fc0c
+            background-color: #040e00
+            width: fit-content
+            z-index: 1
+
+        .frame
+            height: 85vh
+            border: dotted #6dfd4f

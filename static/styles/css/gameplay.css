@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: #6dfd4f;
+  background-color: #0b0f0a;
+  font-size: 18px;
+}
+
+body .save {
+  position: absolute;
+  top: 100vh;
+  left: 100vw;
+  transform: translate(-520px, -155px);
+  color: white;
+  height: 155px;
+  width: 500px;
+  border: dotted #6dfd4f;
+}
+body .save .save-b {
+  background-color: #040e00;
+  color: #6dfd4f;
+  margin-left: 2px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+body .save .save-b:hover, body .save .save-bactive {
+  background-color: #6dfd4f;
+  color: #040e00;
+}
+body .save .margin {
+  margin-left: 2px;
+}
+body .save .user-n {
+  display: inline-block;
+}
+body .save #invalid {
+  display: inline-block;
+  color: red;
+}
+
+body .input {
+  position: absolute;
+  top: 100vh;
+  transform: translate(0px, -35px);
+  margin-left: 5px;
+}
+body .input input {
+  display: inline-block;
+  width: 230px;
+  height: 30px;
+}
+body .input h2 {
+  display: inline-block;
+  margin-left: 10px;
+}
+body #score {
+  width: 120px;
+  margin: 6px;
+}
+body #time {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+/*# sourceMappingURL=gameplay.css.map */

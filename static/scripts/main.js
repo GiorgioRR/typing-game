@@ -81,7 +81,6 @@ function check (text) {
         var current = parseInt(score.textContent.split(" ")[1]);
         
         score.textContent = "score: " + (current + 1);
-
     }
     else {
         document.getElementById("input").style.color = "red";
