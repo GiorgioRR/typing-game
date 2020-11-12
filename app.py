@@ -10,7 +10,7 @@ import os
 port = 5000
 
 current       = f"{os.getcwd()}\\"
-wordlist      = f"{current}wordlist.10000"
+wordlist      = f"{current}\\data\\wordlist.10000"
 DATABASE      = f"{current}sql\\database.db"  # to keep leaderboard data
 TEMPLATES_DIR = os.path.abspath("templates")
 STATIC_DIR    = os.path.abspath("static")
