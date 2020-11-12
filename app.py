@@ -10,7 +10,7 @@ import os
 port = 5000
 
 current       = f"{os.getcwd()}\\"
-wordlist      = f"{current}\\data\\wordlist.10000"
+wordlist      = f"{current}data\\wordlist.10000"
 DATABASE      = f"{current}sql\\database.db"  # to keep leaderboard data
 TEMPLATES_DIR = os.path.abspath("templates")
 STATIC_DIR    = os.path.abspath("static")
@@ -47,12 +47,12 @@ def index():
     for n, user in enumerate(User.query.all()):
         users.append([f"#{n+1}", user.name, user.email, user.score])
 
-    return render_template("index.html", users=users)
+    return render_template("index.html", className="leaderboard", users=users)
 
 
 @app.route("/start/")
 def gameplay():
-    return render_template("gameplay.html")
+    return render_template("gameplay.html", className="gameplay")
 
 
 @socketio.on("time")
