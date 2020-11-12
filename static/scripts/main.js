@@ -1,5 +1,5 @@
 
-function save_data (score_v) {
+const save_data = (score_v) => {
     var user_n  = document.getElementById("user-n").value;
     var email_n = document.getElementById("email-n").value;
 
@@ -19,12 +19,14 @@ function save_data (score_v) {
 }
 
 
-function done () {
-    if (done_b === false){
+const done = () => {
+    console.log("fuck u");
+
+    if ( !finish ) {
         var score_v = document.getElementById("score").textContent.split(" ")[1];
         var html =
         `<div class="save">
-            <h2 class="margin">Do you want to save your score? (${score_v})</h2>
+            <h2 class="margin">Do you want to fcking save your score? (${score_v})</h2>
     
             <h2 class="margin">UserName:</h2>
             <input class="margin" id="user-n" type="text">
@@ -37,12 +39,13 @@ function done () {
             <a><button class="save-b" onclick=save_data(${score_v})>save</button></a>
         </div>`;
         document.getElementById("body").innerHTML += html;  // document.write(html);
-        done_b = true;
+
+        finish = true;
     }
 }
 
 
-function check_elements () {
+const check_elements = () => {
     if (document.getElementById("body").scrollHeight < window.innerHeight) {
         socket.emit("done", {something: "something"});
         done();
@@ -50,7 +53,7 @@ function check_elements () {
 }
 
 
-function next_step (new_text, class_n) {
+const next_step = (new_text, class_n) => {
     for (i = 0; i < elements.length; i++) {
         let ell = elements[i][0];
         let d = document.getElementById(ell);
@@ -62,7 +65,7 @@ function next_step (new_text, class_n) {
 }
 
 
-function check (text) {
+const check = (text) => {
     if (word_list.includes(text)) {
         // const index = word_list.indexOf(text);
         // word_list.splice(index, 1);
@@ -88,7 +91,7 @@ function check (text) {
 }
 
 
-function append_message (text, top_num, class_n) {
+const append_message = (text, top_num, class_n) => {
     var element = 
     `<h2 style="
     position: absolute;
@@ -96,14 +99,13 @@ function append_message (text, top_num, class_n) {
     left: 3px;" id="t${class_n}">${text}</h2>
     `;
 
-    document.getElementById("elements").innerHTML += element;  // ეკრანზე ვამატებთ რანდომ წერტილზე done
-    next_step(text, class_n);                                  // ყველაფერი გადაგვაქ ოდნავ წინ
-    check_elements();                                          // ასევე ვამოწმებთ რომელიმე ხომ არ გასცდა მაქსიმუმს
+    document.getElementById("elements").innerHTML += element;  // append to a random point
+    next_step(text, class_n);                                  // mover every element forward
+    check_elements();                                          // check if the finish line is crossed
 }
 
 
-function main () {
-    done();
+const main = () => {
     var time  = document.getElementById("time");
     var entry = document.getElementById("input");
 
@@ -126,7 +128,7 @@ function main () {
     })
 
     entry.addEventListener("keypress", function (e) {
-        if (e.keyCode == 13) {
+        if (e.keyCode == 13 && !finish) {
             check(entry.value);
         }
     }
@@ -137,7 +139,7 @@ function main () {
 var domain = `http://${document.domain}:${location.port}`;
 var socket = io.connect(domain);
 
-var done_b = false;
+var finish = false;
 
 var word_list = [];
 var elements  = [];  // elements.push([class_name, text])
