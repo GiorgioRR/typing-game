@@ -1,3 +1,4 @@
+
 from flask import Flask, redirect, render_template, request, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
@@ -10,7 +11,7 @@ port = 5000
 
 current       = f"{os.getcwd()}\\"
 wordlist      = f"{current}wordlist.10000"
-DATABASE      = f"{current}sql\\database.db"  # leaderboard-ის მონაცემების შესანახად
+DATABASE      = f"{current}sql\\database.db"  # to keep leaderboard data
 TEMPLATES_DIR = os.path.abspath("templates")
 STATIC_DIR    = os.path.abspath("static")
 
